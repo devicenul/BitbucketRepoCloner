@@ -8,6 +8,9 @@ public class CloneRequest {
     private String bitbucketServerUrl;
 
     @NotNull
+    private String orgOrContext;
+
+    @NotNull
     private String projectKey;
 
     @NotNull
@@ -22,6 +25,11 @@ public class CloneRequest {
     @NotNull
     private String localRepoDirectory;
 
+    private String projectVisibility;
+
+    private String bitbucketApiVersion;
+
+    private Boolean trustSelfSigned;
 
     public String getBitbucketServerUrl() {
         return bitbucketServerUrl;
@@ -29,6 +37,14 @@ public class CloneRequest {
 
     public void setBitbucketServerUrl(String bitbucketServerUrl) {
         this.bitbucketServerUrl = bitbucketServerUrl;
+    }
+
+    public String getOrgOrContext() {
+        return orgOrContext;
+    }
+
+    public void setOrgOrContext(final String orgOrContext) {
+        this.orgOrContext = orgOrContext;
     }
 
     public String getProjectKey() {
@@ -69,5 +85,29 @@ public class CloneRequest {
 
     public void setLocalRepoDirectory(String localRepoDirectory) {
         this.localRepoDirectory = localRepoDirectory;
+    }
+
+    public String getProjectVisibility() {
+        return projectVisibility;
+    }
+
+    public void setProjectVisibility(final String projectVisibility) {
+        this.projectVisibility = projectVisibility;
+    }
+
+    public String getBitbucketApiVersion() {
+        return bitbucketApiVersion;
+    }
+
+    public void setBitbucketApiVersion(final String bitbucketApiVersion) {
+        this.bitbucketApiVersion = bitbucketApiVersion;
+    }
+
+    public Boolean getTrustSelfSigned() {
+        return (trustSelfSigned != null ? trustSelfSigned : false);
+    }
+
+    public void setTrustSelfSigned(final Boolean trustSelfSigned) {
+        this.trustSelfSigned = trustSelfSigned;
     }
 }
