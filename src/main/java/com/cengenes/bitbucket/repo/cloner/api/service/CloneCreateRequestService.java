@@ -74,7 +74,7 @@ public class CloneCreateRequestService {
         } catch (UnirestException e) {
             log.error("Error on obtaining Repos {}", e);
         } finally {
-            // Restore original contextg
+            // Restore original context
             HttpTransport.setConnectionFactory( preservedConnectionFactory );
         }
 
