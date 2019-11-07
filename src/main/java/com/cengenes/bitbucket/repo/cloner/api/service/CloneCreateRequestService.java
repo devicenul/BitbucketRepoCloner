@@ -75,10 +75,10 @@ public class CloneCreateRequestService {
             log.error("Error on obtaining Repos {}", e);
         } finally {
             // Restore original contextg
-
             HttpTransport.setConnectionFactory( preservedConnectionFactory );
         }
 
+        log.info("Clone Operation Complete");
         return repoCloneResponse;
     }
 
